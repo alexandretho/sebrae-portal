@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 210 20% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 14%;
+
+    --primary: 208 100% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 208 60% 95%;
+    --secondary-foreground: 208 100% 33%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 10% 46%;
+
+    --accent: 45 100% 51%;
+    --accent-foreground: 210 20% 14%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 208 100% 33%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 208 100% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 208 60% 95%;
+    --sidebar-accent-foreground: 208 100% 33%;
+    --sidebar-border: 210 20% 90%;
+    --sidebar-ring: 208 100% 33%;
+
+    --sebrae-blue: 208 100% 33%;
+    --sebrae-blue-dark: 210 100% 24%;
+    --sebrae-green: 145 63% 42%;
+    --sebrae-green-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    overflow-wrap: break-word;
+  }
+
+  h1 { @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight; }
+  h2 { @apply text-2xl md:text-3xl font-bold leading-snug; }
+  h3 { @apply text-xl md:text-2xl font-semibold leading-snug; }
+
+  p {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
